@@ -1,5 +1,5 @@
 {% set name = "trio-asyncio" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/trio_asyncio/trio_asyncio-{{ version }}.tar.gz
-  sha256: 1d6ae1d240a8cd89dc0986c23f117bf24851e7e7b47a3d5904360e4c39e98c28
+  sha256: 33113d6c9ba13c643de9d688f1f604b0a40e986754677373cb023ee2867e8c27
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<35]
 
 requirements:
@@ -39,7 +39,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.MIT
-  summary: 'A re-implementation of the asyncio mainloop on top of Trio'
+  summary: A re-implementation of the asyncio mainloop on top of Trio
   description: |
     Trio has native concepts of tasks and task cancellation. Asyncio is based on
     callbacks and chaining Futures, albeit with nicer syntax, which make handling
