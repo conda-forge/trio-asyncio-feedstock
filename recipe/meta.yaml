@@ -1,4 +1,4 @@
-{% set name = "trio_asyncio" %}
+{% set name = "trio-asyncio" %}
 {% set version = "0.12.0" %}
 {% set build_num = 4 %}
 
@@ -8,7 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/t/trio_asyncio/trio_asyncio-{{ version }}.tar.gz
   sha256: 824be23b0c678c0df942816cdb57b92a8b94f264fffa89f04626b0ba2d009768
 
 build:
@@ -32,8 +32,8 @@ test:
     - trio_asyncio
 
 outputs:
-  - name: trio_asyncio
   - name: trio-asyncio
+  - name: trio_asyncio
     build:
       noarch: python
     requirements:
@@ -41,7 +41,7 @@ outputs:
         - python
       run:
         - python
-        - trio_asyncio ={{ version }}=*_{{ build_num }}
+        - trio-asyncio ={{ version }}=*_{{ build_num }}
     test:
       imports:
         - trio_asyncio
