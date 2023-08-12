@@ -1,44 +1,59 @@
 {% set name = "trio-asyncio" %}
 {% set version = "0.12.0" %}
+{% set build_num = 4 %}
+
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/trio_asyncio/trio_asyncio-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/t/trio_asyncio/trio_asyncio-{{ version }}.tar.gz
   sha256: 824be23b0c678c0df942816cdb57b92a8b94f264fffa89f04626b0ba2d009768
 
 build:
-  number: 3
+  noarch: python
+  number: {{ build_num }}
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<35]
 
 requirements:
   host:
-    - python
-    - pip
-    - trio >=0.10.0
-    - async_generator >=1.6
-    - outcome
-    - contextvars >=2.1  # [py<37]
+    - python >=3.7
     - pytest-runner
+    - pip
   run:
-    - python
-    - trio >=0.10.0
-    - async_generator >=1.6
+    - python >=3.7
+    - trio >=0.15.0
+    - attrs
     - outcome
-    - contextvars >=2.1  # [py<37]
 
 test:
   imports:
     - trio_asyncio
 
+outputs:
+  - name: trio-asyncio
+  - name: trio_asyncio
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python
+      run:
+        - python
+        - trio-asyncio ={{ version }}=*_{{ build_num }}
+    test:
+      imports:
+        - trio_asyncio
+
+
 about:
   home: https://github.com/python-trio/trio-asyncio
-  license: MIT
-  license_family: MIT
-  license_file: LICENSE.MIT
+  license: MIT AND Apache-2.0
+  license_file:
+    - LICENSE
+    - LICENSE.APACHE2
+    - LICENSE.MIT
   summary: A re-implementation of the asyncio mainloop on top of Trio
   description: |
     Trio has native concepts of tasks and task cancellation. Asyncio is based on
@@ -54,3 +69,4 @@ about:
 extra:
   recipe-maintainers:
     - scopatz
+    - dhirschfeld
