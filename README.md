@@ -1,4 +1,4 @@
-About trio_asyncio-feedstock
+About trio-asyncio-feedstock
 ============================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/trio-asyncio-feedstock/blob/main/LICENSE.txt)
@@ -43,10 +43,10 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-trio--asyncio-green.svg)](https://anaconda.org/conda-forge/trio-asyncio) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/trio-asyncio.svg)](https://anaconda.org/conda-forge/trio-asyncio) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/trio-asyncio.svg)](https://anaconda.org/conda-forge/trio-asyncio) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/trio-asyncio.svg)](https://anaconda.org/conda-forge/trio-asyncio) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-trio_asyncio-green.svg)](https://anaconda.org/conda-forge/trio_asyncio) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/trio_asyncio.svg)](https://anaconda.org/conda-forge/trio_asyncio) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/trio_asyncio.svg)](https://anaconda.org/conda-forge/trio_asyncio) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/trio_asyncio.svg)](https://anaconda.org/conda-forge/trio_asyncio) |
 
-Installing trio_asyncio
+Installing trio-asyncio
 =======================
 
-Installing `trio_asyncio` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `trio-asyncio` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
@@ -109,7 +109,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
@@ -132,17 +132,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating trio_asyncio-feedstock
+Updating trio-asyncio-feedstock
 ===============================
 
-If you would like to improve the trio_asyncio recipe or build a new
+If you would like to improve the trio-asyncio recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/trio_asyncio-feedstock are
+Note that all branches in the conda-forge/trio-asyncio-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
