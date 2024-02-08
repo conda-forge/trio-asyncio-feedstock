@@ -23,6 +23,7 @@ requirements:
     - pip
   run:
     - python >=3.8
+    - greenlet
     - outcome
     - sniffio >=1.3.0
     - trio >=0.22.0
