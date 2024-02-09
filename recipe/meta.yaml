@@ -1,5 +1,5 @@
 {% set name = "trio-asyncio" %}
-{% set version = "0.13.0" %}
+{% set version = "0.14.0" %}
 {% set build_num = 5 %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/trio_asyncio/trio_asyncio-{{ version }}.tar.gz
-  sha256: 7ca24b21a1b17acde65752d6933886ba24284e52f4b2b0defe4ea8ed8a634a62
+  sha256: 9ac48a43cbe1671b41221ec736ae0cdaa734c8a384ac63620962c15d7b1edd64
 
 build:
   noarch: python
@@ -23,6 +23,7 @@ requirements:
     - pip
   run:
     - python >=3.8
+    - greenlet
     - outcome
     - sniffio >=1.3.0
     - trio >=0.22.0
