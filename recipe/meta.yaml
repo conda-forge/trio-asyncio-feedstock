@@ -1,5 +1,5 @@
 {% set name = "trio-asyncio" %}
-{% set version = "0.14.1" %}
+{% set version = "0.15.0" %}
 {% set build_num = 5 %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/trio_asyncio/trio_asyncio-{{ version }}.tar.gz
-  sha256: 558e9fd4f6fe7f3809382ea1778d34104726435d86adc91097a7c2c163235dcb
+  sha256: 061e31a71fb039d5074f064ec868dc0e6759e6cca33bf3080733a20ee9667781
 
 build:
   noarch: python
