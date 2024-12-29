@@ -1,6 +1,6 @@
 {% set name = "trio-asyncio" %}
 {% set version = "0.15.0" %}
-{% set build_num = 5 %}
+{% set build_num = 6 %}
 
 
 package:
